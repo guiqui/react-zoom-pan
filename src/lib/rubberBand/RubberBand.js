@@ -97,6 +97,17 @@ class RubberBand extends Component {
               this.props.doRubberMouseDown(event, Consts.MODE_RUBER_BAND_RESIZE_DR);
             }}
           />
+          <rect
+            ref="ruberBandBottomLeft"
+            className="rubberBandHandle"
+            x={coordinates.x + coordinates.w / 2 - Consts.RUBBER_BAND_HANDLE_SIZE}
+            y={coordinates.y + coordinates.h / 2}
+            width={Consts.RUBBER_BAND_HANDLE_SIZE}
+            height={Consts.RUBBER_BAND_HANDLE_SIZE}
+            onMouseDown={(event) => {
+              this.props.doRubberMouseDown(event, Consts.MODE_RUBER_BAND_ROTATE);
+            }}
+          />
         </g>
       </svg>
     );

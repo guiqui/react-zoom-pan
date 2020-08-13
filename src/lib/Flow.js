@@ -217,7 +217,7 @@ class Flow extends Component {
     selection.matrix = matrix;
     selection.transform = matrix.matrixToText();
     selection.box = box;
-    this.setState({ selection: selection });
+    this.setState({ box: box, selection: selection });
   };
 
   //////////////////////////
@@ -266,8 +266,10 @@ class Flow extends Component {
       console.log(item.id);
       console.log(`s:${selection.id}  id:${i} `);
       const transform = selection.id == i ? selection.transform : null;
+      const box = selection.id == i ? selection.box : null;
+      console.log(box);
       return (
-        <ViewPortElement id={i} key={i} transform={transform} doObjectMouseDown={this.doObjectMouseDown}>
+        <ViewPortElement id={i} key={i} transform={transform} box={box} doObjectMouseDown={this.doObjectMouseDown}>
           {item}
         </ViewPortElement>
       );

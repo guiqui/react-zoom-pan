@@ -47,8 +47,13 @@ export class ViewPortElement extends React.Component {
   }
 
   render() {
-    const { h, w, transform, children } = this.props;
+    const { h, w, transform, children, box } = this.props;
     this.transform = transform ? transform : this.transform;
+
+    if (box) {
+      this.w = box.w;
+      this.h = box.h;
+    }
     console.log(this.transform);
     return (
       <div
