@@ -1,0 +1,17 @@
+language: node_js
+sudo: false
+node_js:
+  - 'stable'
+install:
+  - npm install -g codecov
+  - npm install moment
+  - npm install react-sizeme
+cache:
+  directories:
+    - node_modules
+script:
+  - npm test
+  - npm run build
+  - codecov
+on:
+  branch: master
