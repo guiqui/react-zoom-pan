@@ -162,3 +162,12 @@ html {
   border-top-right-radius: 17px;
   border-bottom-right-radius: 17px;
 }
+.viewport-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px gray;
+  border-radius: 4px;
+  height: 100%;
+}

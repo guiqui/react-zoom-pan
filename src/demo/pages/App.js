@@ -31,17 +31,30 @@ class App extends Component {
         </div>
         <div className="flow-container">
           <Flow>
-            <div h={100} w={200}>
-              guillermo
+            <div className="viewport-element" x={50} y={50} h={100} w={200}>
+              <input type="text" />
             </div>
-            <div w={100} h={200}>
+            <div className="viewport-element" w={100} h={200}>
+              <img
+                draggable="false"
+                src="https://specials-images.forbesimg.com/imageserve/5d35eacaf1176b0008974b54/960x0.jpg?cropX1=790&cropX2=5350&cropY1=784&cropY2=3349"
+              />
+            </div>
+            <div className="viewport-element" w={100} h={200}>
               guillermo2
             </div>
-            <div w={100} h={200}>
+            <div className="viewport-element" w={100} h={200}>
               guillermo2
             </div>
-            <div w={100} h={200}>
-              guillermo2
+            <div className="viewport-element" w={100} h={200}>
+              <div>1</div>
+              <div>2</div>
+            </div>
+            <div className="viewport-element" x={50} y={50} h={100} w={200}>
+              <input type="text" />
+              <input type="text" />
+              <input type="text" />
+              <button>Hi</button>
             </div>
           </Flow>
         </div>

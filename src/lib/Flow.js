@@ -252,9 +252,6 @@ class Flow extends Component {
   }
 
   setDraggingPosition = (e) => {
-    // this.draggingPositionX=e.clientX-this.refs.container.offsetLeft;
-    // this.draggingPositionY=e.clientY-this.refs.container.offsetTop;
-
     this.draggingPositionX = e.clientX - this.refs.container.offsetLeft;
     this.draggingPositionY = e.clientY - this.refs.container.offsetTop;
   };
