@@ -37,6 +37,12 @@ class App extends Component {
             <div w={100} h={200}>
               guillermo2
             </div>
+            <div w={100} h={200}>
+              guillermo2
+            </div>
+            <div w={100} h={200}>
+              guillermo2
+            </div>
           </Flow>
         </div>
       </div>

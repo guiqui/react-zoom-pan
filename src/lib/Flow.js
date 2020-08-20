@@ -119,8 +119,8 @@ class Flow extends Component {
     if (this.state.dragging) {
       console.log('Moving');
       e.stopPropagation();
-      let x = e.clientX - 170; //this.refs.container.offsetLeft;
-      let y = e.clientY - 57; //this.refs.container.offsetTop;
+      let x = e.clientX - this.refs.container.offsetLeft;
+      let y = e.clientY - this.refs.container.offsetTop;
 
       let deltaX = this.draggingPositionX - x;
       let deltaY = this.draggingPositionY - y;
@@ -255,8 +255,8 @@ class Flow extends Component {
     // this.draggingPositionX=e.clientX-this.refs.container.offsetLeft;
     // this.draggingPositionY=e.clientY-this.refs.container.offsetTop;
 
-    this.draggingPositionX = e.clientX - 170;
-    this.draggingPositionY = e.clientY - 57;
+    this.draggingPositionX = e.clientX - this.refs.container.offsetLeft;
+    this.draggingPositionY = e.clientY - this.refs.container.offsetTop;
   };
 
   renderChildren = () => {

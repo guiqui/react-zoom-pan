@@ -14,7 +14,7 @@ class LinkRenderer extends Component {
   }
   getCoordinates(link) {
     let start = Registry.get(link.start);
-    debugger;
+
     let outputIndex = start.outputs
       ? start.outputs
           .map((x) => {
@@ -35,7 +35,6 @@ class LinkRenderer extends Component {
       enCoor = { x: endTr.trx, y: endTr.try };
       console.log(enCoor);
     } else {
-      debugger;
       let end = Registry.get(link.end);
       endTr = end == this.props.selection.item && this.props.selection.matrix ? this.props.selection.matrix : new Matrix(end.transform);
       let inputIndex = end.inputs ? end.inputs.indexOf(link.input) : 0;

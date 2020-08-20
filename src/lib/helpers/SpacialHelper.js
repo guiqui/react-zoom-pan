@@ -226,7 +226,7 @@ class SpacialHelper {
     let p1 = { x: lastx, y: lasty };
     let p2 = { x: x, y: y };
     let center = SpacialHelper.transformToViewPort(cx, cy, state.viewportMtx, state.selection.matrix, state.parentMtx);
-
+    console.log(`rotating cx:${center.x} cy:${center.y}   x:${x} y:${y} `);
     let direction = SpacialHelper.getRotationDirection(p1, p2, center);
     let angle = SpacialHelper.calculateRotationsAngle(p1, center, p2);
     angle = direction == Consts.CLOCKWISE ? angle : -angle;
