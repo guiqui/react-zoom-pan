@@ -34,13 +34,6 @@ To play with a live [demo](https://guiqui.github.io/react-zoom-pan/index.html) .
 
 Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/react-zoom-pan/)]
 
-## Coming up in version 3.9
-
-- Subtask implementation
-- Add start and end date columns to the task list
-- Beter UX to create links
-- Scroll up/donw in viewPort
-
 ## Installation
 
 ```javascript
@@ -49,25 +42,37 @@ npm install react-zoom-pan
 
 ## Getting started
 
-The first thing to once the component has been install and all it dependencies is create the data that the timeline component consume.The time line has two data providers **data** and **links**.
-
-**Data** :is an array of objects that contains the task to be shown. Each one of the object that are part of the array need to have the following compulsory fields
-
-| Property         |     value     | Descriptions                         |
-| ---------------- | :-----------: | :----------------------------------- |
-| id               | String/Number | An unique identifier for the class   |
-| start            |     Date      | The start date of the task           |
-| end              |     Date      | The end date of the task             |
-| name             |    String     | The name of the task to be diplayed  |
-| color (optional) |    String     | The color of the task to be diplayed |
-
+Using this component is really easy,
 An example of data definition:
 
 ```javascript
-let data = [
-  { id: 1, start: new Date(), end: new Date() + 1, name: 'Demo Task 1' },
-  { id: 2, start: new Date(), end: new Date() + 1, name: 'Demo Task 2' }
-];
+import React, { Component } from 'react';
+import Flow from 'libs/Flow';
+
+import './App.css';
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="app-container">
+        <div className="flow-container">
+          <ZoomPan>
+            <div x={800} y={50} w={200} h={50}>
+              container 1
+            </div>
+            <div x={100} y={250} w={200} h={50}>
+              container 2
+            </div>
+          </ZoomPan>
+        </div>
+      </div>
+    );
+  }
+}
 ```
 
 **Links** :is also an array of objects that contains links between task. Each one of the object that are part of the array need to have the following compulsory fields:

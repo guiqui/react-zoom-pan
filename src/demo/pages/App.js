@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Flow from 'libs/Flow';
+import ZoomPan from 'libs/ZoomPan';
 
 import './App.css';
 
@@ -33,7 +33,7 @@ class App extends Component {
           </a>
         </div>
         <div className="flow-container">
-          <Flow>
+          <ZoomPan>
             <div className="viewport-element" x={50} y={50} h={100} w={200}>
               <input type="text" />
             </div>
@@ -63,7 +63,7 @@ class App extends Component {
               <input type="text" />
               <button>Do it!</button>
             </div>
-          </Flow>
+          </ZoomPan>
         </div>
       </div>
     );

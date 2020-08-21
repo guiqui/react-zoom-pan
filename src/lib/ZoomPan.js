@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import MainRenderer from './renderer/MainRenderer';
 import RubberBand from './rubberBand/RubberBand';
 import Consts, { ObjectTypes } from './helpers/ViewPortConst';
 import SpacialHelper from './helpers/SpacialHelper';
 import ZoomPanHelper from './helpers/ZoomPanHelper';
 import Matrix from './helpers/Matrix';
 import Registry from './registry/Registry';
-import BackGround from './background/BackGround';
-import { withTransform, ViewPortElement } from 'libs/renderer/HOCElement';
+import { ViewPortElement } from 'libs/renderer/HOCElement';
 
-class Flow extends Component {
+class ZoomPan extends Component {
   constructor(props) {
     super(props);
 
@@ -24,16 +22,11 @@ class Flow extends Component {
       viewportTr: '1,0,0,1,0,0',
       selection: this.getSelectedObjInfo(null)
     };
-
-    ///LOCAL VARIABLES
     this.draggingPositionX = 0;
     this.draggingPositionY = 0;
     this.mode = Consts.MODE_GLOBAL_PAN;
     Registry.addAll(this.props.data);
   }
-  ///////////////////////
-  /// STATE MANAGEMENT //
-  ///////////////////////
 
   shouldComponentUpdate(nextProps, nextState) {
     if (nextState.dragging !== this.state.dragging) {
@@ -314,4 +307,4 @@ class Flow extends Component {
   }
 }
 
-export default Flow;
+export default ZoomPan;
