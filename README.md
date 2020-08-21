@@ -2,14 +2,14 @@
 
 [![npm](https://img.shields.io/npm/v/react-zoom-pan.svg?style=flat-square)](http://npm.im/react-zoom-pan)
 [![MIT License](https://img.shields.io/npm/l/react-list.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-[![Travis](https://travis-ci.org/guiqui/react-timeline-gantt.svg?branch=master)](https://travis-ci.org/guiqui/react-timeline)
-[![codecov](https://codecov.io/gh/guiqui/react-timeline-gantt/branch/master/graph/badge.svg)](https://codecov.io/gh/guiqui/react-timeline-gantt)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9149e301e65b44cebf2e7b49316aee10)](https://www.codacy.com/app/gquiman/react-timeline-gantt?utm_source=github.com&utm_medium=referral&utm_content=guiqui/react-timeline-gantt&utm_campaign=Badge_Grade)
-<img src="https://opencollective.com/react-timeline-gantt/tiers/backer/badge.svg?label=backer&color=brightgreen" />
+[![Travis](https://travis-ci.org/guiqui/react-zoom-pan.svg?branch=master)](https://travis-ci.org/guiqui/react-timeline)
+[![codecov](https://codecov.io/gh/guiqui/react-zoom-pan/branch/master/graph/badge.svg)](https://codecov.io/gh/guiqui/react-zoom-pan)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9149e301e65b44cebf2e7b49316aee10)](https://www.codacy.com/app/gquiman/react-zoom-pan?utm_source=github.com&utm_medium=referral&utm_content=guiqui/react-zoom-pan&utm_campaign=Badge_Grade)
+<img src="https://opencollective.com/react-zoom-pan/tiers/backer/badge.svg?label=backer&color=brightgreen" />
 
 A react component that enables you to add pan,zoom,resize and rotation functionality to your application
 
-![screencast](https://guiqui.github.io/react-timeline-gantt/demo.gif)
+![screencast](https://guiqui.github.io/react-zoom-pan/demo.gif)
 
 ## About
 
@@ -28,11 +28,11 @@ The component is capable of:
 
 To watch a demo take a look at [video](https://youtu.be/ASGD1FXOafw) that shows how to use the component.
 
-To play with a live [demo](https://guiqui.github.io/react-timeline-gantt/index.html) .
+To play with a live [demo](https://guiqui.github.io/react-zoom-pan/index.html) .
 
 ## Backers
 
-Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/react-timeline-gantt/)]
+Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/react-zoom-pan/)]
 
 ## Coming up in version 3.9
 
@@ -100,7 +100,7 @@ Here is the demo code:
 
 ## Handling Inserts,Updates and Deletes
 
-The React-timeline-gantt was build to be use under a Flux architecture, this means that the component should not be managing the state of the application, is up the store and only the store to modify the state of the application. What our component does is to give you callbacks to know when the component is asking for a change.
+The react-zoom-pan was build to be use under a Flux architecture, this means that the component should not be managing the state of the application, is up the store and only the store to modify the state of the application. What our component does is to give you callbacks to know when the component is asking for a change.
 
 The TimeLine component is responsible for two things:
 
@@ -108,7 +108,7 @@ The TimeLine component is responsible for two things:
 - Creating Links
 
 Adding,Deleting Task or links can be manage with logic outside the component.
-For this reason the react-timeline-gantt component provides the following callbacks:
+For this reason the react-zoom-pan component provides the following callbacks:
 
 | name         |          params          |                                                                                                                                           Descriptions |
 | ------------ | :----------------------: | -----------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -146,7 +146,7 @@ Here is a demo app that shows how to use onHorizonChange, to only display the re
 
 ## Customisation
 
-To customise the look and feel the react-timeline-gantt component provides a configuration object that can be pass as a property.
+To customise the look and feel the react-zoom-pan component provides a configuration object that can be pass as a property.
 Here is the structure of the config object :
 
 ```javascript
@@ -207,7 +207,7 @@ Once the object is defined we just need to pass the config object to the timelin
 
 This diagram shows the different elements of timeline component and where are they place:
 
-![configMap](https://guiqui.github.io/react-timeline-gantt/ConfigMap.png)
+![configMap](https://guiqui.github.io/react-zoom-pan/ConfigMap.png)
 
 Here is a demo:
 
