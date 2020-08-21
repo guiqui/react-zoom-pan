@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { ObjectTypes } from '../helpers/ViewPortConst';
-import ActionRenderer from './action/ActionRenderer';
 
 class MainRenderer extends Component {
   constructor(props) {

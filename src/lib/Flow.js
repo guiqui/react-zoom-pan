@@ -4,11 +4,9 @@ import RubberBand from './rubberBand/RubberBand';
 import Consts, { ObjectTypes } from './helpers/ViewPortConst';
 import SpacialHelper from './helpers/SpacialHelper';
 import ZoomPanHelper from './helpers/ZoomPanHelper';
-import LinkManager from './links/LinkManager';
 import Matrix from './helpers/Matrix';
 import Registry from './registry/Registry';
 import BackGround from './background/BackGround';
-import LinkHelper from './links/LinkHelper';
 import { withTransform, ViewPortElement } from 'libs/renderer/HOCElement';
 
 class Flow extends Component {
@@ -309,7 +307,6 @@ class Flow extends Component {
           >
             {this.renderChildren()}
           </div>
-
           <RubberBand selection={this.selection} viewport={this.state} doRubberMouseDown={this.doRubberMouseDown} />
         </div>
       </div>
