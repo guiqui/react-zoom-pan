@@ -47,7 +47,7 @@ An example of data definition:
 
 ```javascript
 import React, { Component } from 'react';
-import Flow from 'libs/Flow';
+import ZoomPan from 'react-zoom-pan';
 
 import './App.css';
 
