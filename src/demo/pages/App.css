@@ -31,7 +31,9 @@ html {
 .title-container {
   display: flex;
   justify-content: flex-start;
-  background-color: #333333;
+  align-items: center;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(45, 45, 45, 1) 35%, rgba(143, 143, 143, 1) 100%);
   color: white;
   width: 100%;
   flex: 0 0 auto;
@@ -165,9 +167,13 @@ html {
 .viewport-element {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   border: solid 1px gray;
   border-radius: 4px;
   height: 100%;
+}
+
+.container1 {
+  background-color: orange;
 }
