@@ -75,33 +75,9 @@ export default class App extends Component {
 }
 ```
 
-**Links** :is also an array of objects that contains links between task. Each one of the object that are part of the array need to have the following compulsory fields:
-
-| Property |     value     | Descriptions                       |
-| -------- | :-----------: | :--------------------------------- |
-| id       | String/Number | An unique identifier for the class |
-| start    | String/Number | The id of the start task           |
-| end      | String/Number | The id of the end task             |
-
-An example of data definition:
-
-```javascript
-let links = [
-  { id: 1, start: 1, end: 2 },
-  { id: 2, start: 1, end: 3 }
-];
-```
-
-Once the data is define we just need to declare the component and populate it with both data providers.
-
-```javascript
-
-<TimeLine  data={data} links={links}/>);
-```
-
 Here is the demo code:
 
-[![Edit 1y2on87jj](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/1y2on87jj)
+[![Edit 1y2on87jj](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/smoosh-leftpad-3g27o?fontsize=14&hidenavigation=1&theme=dark)
 
 ## Handling Inserts,Updates and Deletes
 
