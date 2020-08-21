@@ -10,7 +10,8 @@
     "build": "webpack --mode production  --config webpack.config.build.js",
     "lint": "eslint src",
     "test": "jest && codecov",
-    "prepublish": "rm -rf ./dist && npm run build"
+    "prepublish": "rm -rf ./dist && npm run build",
+    "clean": "rm -rf ./dist"
   },
   "peerDependencies": {
     "react": "^16.3.2",
@@ -48,18 +49,14 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
-  "author": "Guillermo  Quiros",
+  "author": "Guillermo  Quiros, UxxU Ltd",
   "license": "MIT",
   "keywords": [
     "react",
-    "timeline",
-    "gantt",
-    "virtual",
-    "virtualize",
-    "planning",
-    "scheduler",
-    "calendar",
-    "project management"
+    "zoom",
+    "pan",
+    "rotation",
+    "cad"
   ],
-  "homepage": "https://github.com/guiqui/react-flow"
+  "homepage": "https://github.com/guiqui/react-zoom-pan"
 }
