@@ -5,7 +5,7 @@
 [![Travis](https://travis-ci.org/guiqui/react-zoom-pan.svg?branch=master)](https://travis-ci.org/guiqui/react-zoom-pan)
 [![codecov](https://codecov.io/gh/guiqui/react-zoom-pan/branch/master/graph/badge.svg)](https://codecov.io/gh/guiqui/react-zoom-pan)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9149e301e65b44cebf2e7b49316aee10)](https://www.codacy.com/app/gquiman/react-zoom-pan?utm_source=github.com&utm_medium=referral&utm_content=guiqui/react-zoom-pan&utm_campaign=Badge_Grade)
-[![downloads](https://img.shields.io/npm/dt/react-gantt-timeline.svg?maxAge=2592000)](https://www.npmjs.com/package/react-zoom-pan)
+[![downloads](https://img.shields.io/npm/dt/react-zoom-pan.svg?maxAge=2592000)](https://www.npmjs.com/package/react-zoom-pan)
 
 A react component that enables you to add pan,zoom,resize and rotation functionality to your application
 
