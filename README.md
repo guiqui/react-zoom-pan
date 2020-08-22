@@ -9,7 +9,7 @@
 
 A react component that enables you to add pan,zoom,resize and rotation functionality to your application
 
-![screencast](https://guiqui.github.io/react-zoom-pan/demo.gif)
+![screencast](https://guiqui.github.io/react-zoom-pan/presentation.gif)
 
 ## About
 
