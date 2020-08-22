@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/react-zoom-pan.svg?style=flat-square)](http://npm.im/react-zoom-pan)
 [![MIT License](https://img.shields.io/npm/l/react-list.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-[![Travis](https://travis-ci.org/guiqui/react-zoom-pan.svg?branch=master)](https://travis-ci.org/guiqui/react-timeline)
+[![Travis](https://travis-ci.org/guiqui/react-zoom-pan.svg?branch=master)](https://travis-ci.org/guiqui/react-zoom-pan)
 [![codecov](https://codecov.io/gh/guiqui/react-zoom-pan/branch/master/graph/badge.svg)](https://codecov.io/gh/guiqui/react-zoom-pan)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9149e301e65b44cebf2e7b49316aee10)](https://www.codacy.com/app/gquiman/react-zoom-pan?utm_source=github.com&utm_medium=referral&utm_content=guiqui/react-zoom-pan&utm_campaign=Badge_Grade)
 <img src="https://opencollective.com/react-zoom-pan/tiers/backer/badge.svg?label=backer&color=brightgreen" />
