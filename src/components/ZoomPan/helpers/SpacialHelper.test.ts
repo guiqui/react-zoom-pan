@@ -361,11 +361,11 @@ describe('Calculate Rotation Angle', () => {
 
 describe('Test Resize Obj', () => {
   test('TOP LEFT', () => {
-    let p1 = { x: 1, y: 0 };
-    let p2 = { x: 4, y: 0 };
     let state: any = {};
     state.selectedMtx = new Matrix();
-    state.box = { w: 20, h: 20 };
+    state.selection = {};
+    state.selection.box = { w: 20, h: 20 };
+    state.selection.matrix = new Matrix('1, 0, 0, 1, 0, 0');
     let result = SpacialHelper.resizeObject(
       10,
       10,
@@ -378,11 +378,11 @@ describe('Test Resize Obj', () => {
     expect(result.box.h).toBe(30);
   });
   test('TOP RIGHT', () => {
-    let p1 = { x: 1, y: 0 };
-    let p2 = { x: 4, y: 0 };
     let state: any = {};
     state.selectedMtx = new Matrix();
-    state.box = { w: 20, h: 20 };
+    state.selection = {};
+    state.selection.box = { w: 20, h: 20 };
+    state.selection.matrix = new Matrix('1, 0, 0, 1, 0, 0');
     let result = SpacialHelper.resizeObject(
       10,
       10,
@@ -395,11 +395,11 @@ describe('Test Resize Obj', () => {
     expect(result.box.h).toBe(30);
   });
   test('BOTTOM LEFT', () => {
-    let p1 = { x: 1, y: 0 };
-    let p2 = { x: 4, y: 0 };
     let state: any = {};
     state.selectedMtx = new Matrix();
-    state.box = { w: 20, h: 20 };
+    state.selection = {};
+    state.selection.box = { w: 20, h: 20 };
+    state.selection.matrix = new Matrix('1, 0, 0, 1, 0, 0');
     let result = SpacialHelper.resizeObject(
       10,
       10,
@@ -412,11 +412,11 @@ describe('Test Resize Obj', () => {
     expect(result.box.h).toBe(10);
   });
   test('BOTTOM RIGHT', () => {
-    let p1 = { x: 1, y: 0 };
-    let p2 = { x: 4, y: 0 };
     let state: any = {};
     state.selectedMtx = new Matrix();
-    state.box = { w: 20, h: 20 };
+    state.selection = {};
+    state.selection.box = { w: 20, h: 20 };
+    state.selection.matrix = new Matrix('1, 0, 0, 1, 0, 0');
     let result = SpacialHelper.resizeObject(
       10,
       10,

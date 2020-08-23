@@ -56,7 +56,7 @@ class SpacialHelper {
   static scaleToCenter(cx, cy, scale, matrix) {
     if (scale == 0 || !matrix) return matrix;
     matrix = matrix.translate(cx, cy);
-    matrix = matrix.scale(scale);
+    matrix = matrix.scale(scale, scale);
     matrix = matrix.translate(-cx, -cy);
     return matrix;
   }

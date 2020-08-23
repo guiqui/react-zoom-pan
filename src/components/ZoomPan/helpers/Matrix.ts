@@ -54,7 +54,7 @@ class Matrix {
     return this.rotate(angle * 0.017453292519943295);
   }
 
-  scale(sx, sy) {
+  scale(sx: number, sy: number) {
     return this.transform(sx, 0, 0, sy, 0, 0);
   }
 

@@ -43,7 +43,8 @@ npm install react-zoom-pan
 ## Getting started
 
 Using this component is really easy,
-An example of data definition:
+Import the ZoomPan component,add the ZoomPan to your render method and add whatever other component inside the ZoomPan container.
+And that's all. Now all the components inside the container can be move,resize and rotate, you also can use your mouse wheel to zoom and pan.
 
 ```javascript
 import React, { Component } from 'react';
@@ -79,123 +80,20 @@ Here is the demo code:
 
 [![Edit 1y2on87jj](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/smoosh-leftpad-3g27o?fontsize=14&hidenavigation=1&theme=dark)
 
-## Handling Inserts,Updates and Deletes
+## Element Configuration
 
-The react-zoom-pan was build to be use under a Flux architecture, this means that the component should not be managing the state of the application, is up the store and only the store to modify the state of the application. What our component does is to give you callbacks to know when the component is asking for a change.
+To set the dimensions like (x,y) positions or (width,height) on the children documents you can set the following properties:
 
-The TimeLine component is responsible for two things:
+| name |                                     Descriptions |
+| ---- | -----------------------------------------------: |
+| y    | The y coordinate of the top point of the element |
+| w    |                         The width of the element |
+| h    |                        The height of the element |
 
-- Updating task:Changing name ,start and end date
-- Creating Links
+## Events
 
-Adding,Deleting Task or links can be manage with logic outside the component.
-For this reason the react-zoom-pan component provides the following callbacks:
-
-| name         |          params          |                                                                                                                                           Descriptions |
-| ------------ | :----------------------: | -----------------------------------------------------------------------------------------------------------------------------------------------------: |
-| onCreateLink |       link:Object        |                                                      This callback is trigger when the component is notifying the creating of a link between two tasks |
-| onUpdateTask | task:Object,props:Object | This callback is trigger when the component is notifying the updating of a Task, Sen the task we want to changes, and the properties we want to change |
-| onSelectItem |       item:Object        |                                                                         This callback is trigger when an item is selected this can be a task or a link |
-
-Here is a simple demo of how to handle updates task and link creation:
-
-[![Edit 3rl69y5ylq](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/3rl69y5ylq)
-
-- When you drag a task or resize an update will be triggered.
-- You can create a task by clicking in the black dot at the end of a task and drag and drop it to the beginning of another task.A demo of how it works can be seen [here](https://youtu.be/ASGD1FXOafw)
-
-Here is a full crud example: This demo illustrate how to do a simple application
-
-[![Edit 3x8nl16p65](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/3x8nl16p65)
-
-Here is a fully working Redux demo
-
-[![Edit 613vkoq8nr](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/613vkoq8nr)
-
-## Paging
-
-Paging is manage using the event onHorizonChange.The timeline component preload a certain date range of data, once the user start scrolling when the timeline realise that needs data for a new range, it trigger the onHorizonChange event.
-This method then can be use to support serverside paging or client filtering.
-
-| name            |     params     |                                                                                               Descriptions |
-| --------------- | :------------: | ---------------------------------------------------------------------------------------------------------: |
-| onHorizonChange | start,end:Date | This callback is trigger when the component is notifying that needs to load data for a new range of dates. |
-
-Here is a demo app that shows how to use onHorizonChange, to only display the relvant data for a period:
-
-[![Edit n09l7m400j](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n09l7m400j)
-
-## Customisation
-
-To customise the look and feel the react-zoom-pan component provides a configuration object that can be pass as a property.
-Here is the structure of the config object :
-
-```javascript
-{
-	header:{ //Targert the time header containing the information month/day of the week, day and time.
-		month:{//Tartget the month elements
-			dateFormat:'MMM YYYY',//The format used to diplay the month information
-			style:{backgroundColor:"#333333"} //The style applied to the month elements
-		},
-		dayOfWeek:{//Tartget elements displaying the day of week info
-			style:{backgroundColor:"chocolate"}, //The style applied to the day of week elements
-			selectedStyle:{backgroundColor:"#b13525"}//The style applied to the day of week elements when is selected
-		},
-		dayTime:{//Tartget elements displaying the day number or time
-			style:{background:"grey",fontSize:9},//the style tp be applied
-			selectedStyle:{backgroundColor:"#b13525",fontWeight:  'bold'}//the style tp be applied  when selected
-		}
-	},
-	taskList:{//the right side task list
-		title:{//The title od the task list
-			label:"Projects",//The caption to display as title
-			style:{backgroundColor:  '#333333',borderBottom:  'solid 1px silver',
-				   color:  'white',textAlign:  'center'}//The style to be applied to the title
-		},
-		task:{// The items inside the list diplaying the task
-			style:{backgroundColor:  '#fbf9f9'}// the style to be applied
-		},
-		verticalSeparator:{//the vertical seperator use to resize he width of the task list
-			style:{backgroundColor:  '#333333',},//the style
-			grip:{//the four square grip inside the vertical separator
-				style:{backgroundColor:  '#cfcfcd'}//the style to be applied
-			}
-		}
-	},
-	dataViewPort:{//The are where we display the task
-		rows:{//the row constainting a task
-			style:{backgroundColor:"#fbf9f9",borderBottom:'solid 0.5px #cfcfcd'}
-			},
-		task:{the task itself
-			showLabel:false,//If the task display the a lable
-			style:{position:  'absolute',borderRadius:14,color:  'white',
-				   textAlign:'center',backgroundColor:'grey'},
-			 selectedStyle:{}//the style tp be applied  when selected
-		}
-	},
-	links:{//The link between two task
-		color:'black',
-		selectedColor:'#ff00fa'
-	}
-}
-```
-
-Once the object is defined we just need to pass the config object to the timeline config property.
-
-```javascript
-<TimeLine  data={data} links={links}/>);
-```
-
-This diagram shows the different elements of timeline component and where are they place:
-
-![configMap](https://guiqui.github.io/react-zoom-pan/ConfigMap.png)
-
-Here is a demo:
-
-[![Edit 2w93lvmqv0](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/2w93lvmqv0)
-
-## Other properties
-
-| Property | value  |                                                    Descriptions |
-| -------- | :----: | --------------------------------------------------------------: |
-| mode     | string | set the zoom level.The possible values are:"month","week","day" |  |
+| Property     | params |                                                    Descriptions |
+| ------------ | :----: | --------------------------------------------------------------: |
+| onSelectItem | string | set the zoom level.The possible values are:"month","week","day" |
+| onChange     | string | set the zoom level.The possible values are:"month","week","day" |
+| onAddItem    | string | set the zoom level.The possible values are:"month","week","day" |
