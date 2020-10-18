@@ -13,7 +13,7 @@ A react component that enables you to add pan,zoom,resize and rotation functiona
 
 ## About
 
-With React-zoom-pan is a container component that has g zoom and pan functionality as well as adding resize,move,and rotatation capabilities to any child element .
+React-zoom-pan is a container component that has zoom and pan functionality as well as adding resize,move,and rotation capabilities to any child element .
 
 The component is capable of:
 
