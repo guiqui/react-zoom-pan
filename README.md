@@ -76,6 +76,10 @@ export default class App extends Component {
 }
 ```
 
+## demo
+
+To play with a live [demo](https://guiqui.github.io/react-zoom-pan/index.html) .
+
 <!-- Here is the demo code:
 
 [![Edit 1y2on87jj](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/smoosh-leftpad-3g27o?fontsize=14&hidenavigation=1&theme=dark) -->
