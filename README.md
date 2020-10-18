@@ -26,7 +26,6 @@ The component is capable of:
 - Wheel zoom.
 - Fully customisable elements.
 
-To watch a demo take a look at [video](https://youtu.be/ASGD1FXOafw) that shows how to use the component.
 
 ## demo
 
@@ -96,6 +95,6 @@ To set the dimensions like (x,y) positions or (width,height) on the children doc
 
 | Property     | params |                                                    Descriptions |
 | ------------ | :----: | --------------------------------------------------------------: |
-| onSelectItem | string | set the zoom level.The possible values are:"month","week","day" |
-| onChange     | string | set the zoom level.The possible values are:"month","week","day" |
-| onAddItem    | string | set the zoom level.The possible values are:"month","week","day" |
+| onSelectItem | string | triggered when an element is selected |
+| onChange     | string | triggered when an element change |
+| onAddItem    | string | triggered when an element is added |
