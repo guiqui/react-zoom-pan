@@ -1,40 +1,30 @@
-import typescript from 'rollup-plugin-typescript2';
-import { terser } from 'rollup-plugin-terser';
-import postcss from 'rollup-plugin-postcss';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import pkg from './package.json';
+import typescript from 'rollup-plugin-typescript2';
+import postcss from 'rollup-plugin-postcss';
 
-const globals = {
-  classnames: 'classnames',
-  react: 'React',
-};
+const packageJson = require('./package.json');
 
 export default {
-  input: './src/index.ts',
-  external: [
-    ...Object.keys(pkg.dependencies),
-    ...Object.keys(pkg.devDependencies),
-  ],
+  input: 'src/index.ts',
   output: [
     {
-      file: `./dist/${pkg.main}`,
+      file: `./dist/${packageJson.main}`,
       format: 'cjs',
-      globals,
       sourcemap: true,
     },
     {
-      file: `./dist/${pkg.module}`,
-      format: 'es',
-      globals,
-      sourcemap: true,
-    },
-    {
-      file: `./dist/${pkg.browser}`,
-      format: 'iife',
-      name: 'lib',
-      globals,
+      file: `./dist/${packageJson.module}`,
+      format: 'esm',
       sourcemap: true,
     },
   ],
-  plugins: [commonjs(), postcss(), typescript(), terser()],
+  plugins: [
+    peerDepsExternal(),
+    resolve(),
+    commonjs(),
+    typescript({ useTsconfigDeclarationDir: true }),
+    postcss(),
+  ],
 };

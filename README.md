@@ -76,9 +76,9 @@ export default class App extends Component {
 }
 ```
 
-Here is the demo code:
+<!-- Here is the demo code:
 
-[![Edit 1y2on87jj](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/smoosh-leftpad-3g27o?fontsize=14&hidenavigation=1&theme=dark)
+[![Edit 1y2on87jj](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/smoosh-leftpad-3g27o?fontsize=14&hidenavigation=1&theme=dark) -->
 
 ## Element Configuration
 
