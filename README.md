@@ -28,6 +28,8 @@ The component is capable of:
 
 To watch a demo take a look at [video](https://youtu.be/ASGD1FXOafw) that shows how to use the component.
 
+## demo
+
 To play with a live [demo](https://guiqui.github.io/react-zoom-pan/index.html) .
 
 ## Backers
@@ -75,10 +77,6 @@ export default class App extends Component {
   }
 }
 ```
-
-## demo
-
-To play with a live [demo](https://guiqui.github.io/react-zoom-pan/index.html) .
 
 <!-- Here is the demo code:
 
