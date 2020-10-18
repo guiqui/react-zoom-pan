@@ -1,0 +1,31 @@
+.rubberBand-Container{
+    pointer-events:none;
+    position:absolute;
+}
+.rubberBand{
+    fill:none;
+    pointer-events:none;
+    stroke:rgb(238, 99, 243);
+    stroke-width:1;
+    fill-opacity:0.0;
+    stroke-opacity:1;
+    stroke-dasharray:2
+}
+
+.rubberBandHandle{
+    fill:white;
+    pointer-events:fill;
+    stroke:#ee63f3;
+    stroke-width:1;
+    fill-opacity:1;
+    stroke-opacity:0.9;
+}
+
+.rubberConnector{
+    pointer-events:fill;
+    fill:white;
+    stroke:#ee63f3;
+    stroke-width:1;
+    fill-opacity:1;
+    stroke-opacity:0.9;
+}
