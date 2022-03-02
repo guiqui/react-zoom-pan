@@ -52,6 +52,7 @@ export class ViewPortElement extends React.PureComponent<ViewPortElementProps> {
           transform: `matrix(${this.transform})`,
         }}
         onMouseDown={(e) => this.props.doObjectMouseDown(e, null, this)}
+        onTouchStart={(e) => this.props.doObjectMouseDown(e, null, this)}
       >
         {children}
       </div>
