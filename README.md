@@ -100,3 +100,8 @@ To set the dimensions like (x,y) positions or (width,height) on the children doc
 | onSelectItem | string | triggered when an element is selected |
 | onChange     | string | triggered when an element change |
 | onAddItem    | string | triggered when an element is added |
+
+## Other Free Apps we have created:
+- [Profile Me](https://profile.softcloud.pro/) - Creates Professional Profile pictures.
+- [Background RM](https://rmbackground.softcloud.pro/) - Remove pictures Background.
+- [MetersApp](https://app.meters.app/login) - Create Quotes using measures from floorplan.
