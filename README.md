@@ -11,6 +11,9 @@ A react component that enables you to add pan,zoom,resize and rotation functiona
 
 ![screencast](https://guiqui.github.io/react-zoom-pan/presentation.gif)
 
+## K8Studio.io is our Golden Sponsor
+ [![alt text](https://guiqui.github.io/react-timeline-gantt/k8StudioWhite.png)](https://www.k8studio.io)
+ 
 ## About
 
 React-zoom-pan is a container component that has zoom and pan functionality as well as adding resize,move,and rotation capabilities to any child element .
