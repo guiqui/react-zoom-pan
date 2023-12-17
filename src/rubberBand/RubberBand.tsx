@@ -34,6 +34,7 @@ class RubberBand extends React.Component<IRubberBandProps> {
     return { x: box.x, y: box.y, w: box.w, h: box.h, transform: box.transform };
   }
 
+
   render() {
     let coordinates = this.calculateCoordinates();
     const { selection } = this.props;
@@ -46,6 +47,9 @@ class RubberBand extends React.Component<IRubberBandProps> {
         width="100%"
         height="100%"
         onMouseDown={(event) => {
+          this.props.doRubberMouseDown(event, Consts.MODE_RUBER_BAND_MOVE);
+        }}
+        onTouchStart={(event) => {
           this.props.doRubberMouseDown(event, Consts.MODE_RUBER_BAND_MOVE);
         }}
       >
@@ -72,6 +76,13 @@ class RubberBand extends React.Component<IRubberBandProps> {
                 Consts.MODE_RUBER_BAND_RESIZE_UL
               );
             }}
+
+            onTouchStart={(event) => {
+              this.props.doRubberMouseDown(
+                  event,
+                  Consts.MODE_RUBER_BAND_RESIZE_UL
+              );
+            }}
           />
           <rect
             ref="ruberBandTopRight"
@@ -84,6 +95,13 @@ class RubberBand extends React.Component<IRubberBandProps> {
               this.props.doRubberMouseDown(
                 event,
                 Consts.MODE_RUBER_BAND_RESIZE_UR
+              );
+            }}
+
+            onTouchStart={(event) => {
+              this.props.doRubberMouseDown(
+                  event,
+                  Consts.MODE_RUBER_BAND_RESIZE_UR
               );
             }}
           />
@@ -100,6 +118,13 @@ class RubberBand extends React.Component<IRubberBandProps> {
                 Consts.MODE_RUBER_BAND_RESIZE_DL
               );
             }}
+
+            onTouchStart={(event) => {
+              this.props.doRubberMouseDown(
+                  event,
+                  Consts.MODE_RUBER_BAND_RESIZE_DL
+              );
+            }}
           />
           <rect
             ref="ruberBandBottomRight"
@@ -112,6 +137,13 @@ class RubberBand extends React.Component<IRubberBandProps> {
               this.props.doRubberMouseDown(
                 event,
                 Consts.MODE_RUBER_BAND_RESIZE_DR
+              );
+            }}
+
+            onTouchStart={(event) => {
+              this.props.doRubberMouseDown(
+                  event,
+                  Consts.MODE_RUBER_BAND_RESIZE_DR
               );
             }}
           />
@@ -129,6 +161,9 @@ class RubberBand extends React.Component<IRubberBandProps> {
                 event,
                 Consts.MODE_RUBER_BAND_ROTATE
               );
+            }}
+            onTouchStart={(event) => {
+              this.props.doRubberMouseDown(event, Consts.MODE_RUBER_BAND_ROTATE);
             }}
           />
         </g>
